@@ -1,132 +1,175 @@
-// 1. String Concatenation
-// Definition: Concatenation is the process of joining two or more strings into one.
-// Example: Combining text with variables.
-const numA = 100;
-const numB = 240;
-console.log(`The Sum of numA & numB is ${numA + numB}.`); // Output: The Sum of numA & numB is 340.
+// // 1. String Concatenation
+// // Definition: Concatenation is the process of joining two or more strings into one.
+// // Example: Combining text with variables.
+// const numA = 100;
+// const numB = 240;
+// console.log(`The Sum of numA & numB is ${numA + numB}.`); // Output: The Sum of numA & numB is 340.
 
 
-// 2. Type Coercion
-// Definition: Type coercion is JavaScript's automatic conversion of values from one data type to another during operations.
-const basicNum = 42;
-const basicStr = "The number is " + 42;
-console.log(basicStr); // Output: The number is 42
+// // 2. Type Coercion
+// // Definition: Type coercion is JavaScript's automatic conversion of values from one data type to another during operations.
+// const basicNum = 42;
+// const basicStr = "The number is " + 42;
+// console.log(basicStr); // Output: The number is 42
 
-console.log('1' + 1);    // "11" because a number is coerced to a string for concatenation.
-console.log('11' * 2);   // 22 (the string '11' is coerced to a number).
-console.log('33' / 2);   // 16.5
-console.log('50' % 5);   // 0
-
-
-// 3. Accepting Input and Type Casting
-// Definition: Type casting is the explicit conversion of a value from one type to another.
-// Note: prompt() always returns a string.
-const ageInput = prompt('Enter your age:');
-console.log("Age (string):", ageInput);
-console.log("Type:", typeof ageInput); // Type: string
-
-// To convert the prompt value to a number:
-const ageNumber = Number(prompt('Enter your age (for number conversion):'));
-console.log("Age (number):", ageNumber);
-console.log("Type:", typeof ageNumber); // Type: number
+// console.log('1' + 1);    // "11" because a number is coerced to a string for concatenation.
+// console.log('11' * 2);   // 22 (the string '11' is coerced to a number).
+// console.log('33' / 2);   // 16.5
+// console.log('50' % 5);   // 0
 
 
-// 4. Swapping Variables
-// Definition: Swapping is exchanging the values of two variables.
-// Modern Approach: Using array destructuring to swap values in one line.
-let swapX = 10;
-let swapY = 20;
-[swapX, swapY] = [swapY, swapX];
-console.log("After swapping -> swapX:", swapX, "swapY:", swapY); // Output: 20 10
+// // 3. Accepting Input and Type Casting
+// // Definition: Type casting is the explicit conversion of a value from one type to another.
+// // Note: prompt() always returns a string.
+// const ageInput = prompt('Enter your age:');
+// console.log("Age (string):", ageInput);
+// console.log("Type:", typeof ageInput); // Type: string
+
+// // To convert the prompt value to a number:
+// const ageNumber = Number(prompt('Enter your age (for number conversion):'));
+// console.log("Age (number):", ageNumber);
+// console.log("Type:", typeof ageNumber); // Type: number
 
 
-// 5. Modulus Operation
-// Definition: The modulus operator (%) returns the remainder of a division between two numbers.
-let modValue = 4450;
-console.log("4450 % 20 =", modValue % 20); // Output: 10
+// // 4. Swapping Variables
+// // Definition: Swapping is exchanging the values of two variables.
+// // Modern Approach: Using array destructuring to swap values in one line.
+// let swapX = 10;
+// let swapY = 20;
+// [swapX, swapY] = [swapY, swapX];
+// console.log("After swapping -> swapX:", swapX, "swapY:", swapY); // Output: 20 10
 
 
-// 6. Unary Operators
-// Definition: Unary operators (like ++ and --) increment or decrement a variable by one.
-// Note: Post-increment (a++) returns the value before incrementing,
-// and pre-increment (++a) returns the value after incrementing.
-let uniA = 20;
-let uniB = 45;
-let uniC = uniA + uniB + uniA++ + uniB++ + ++uniA + ++uniB;
-console.log("Final uniA:", uniA);
-console.log("Final uniB:", uniB);
-console.log("Computed uniC:", uniC);
-
-// The following lines that try to modify constants are commented out because they cause errors:
-// const errConst = 33++; // Error: Cannot use ++ on a constant.
-// const errVal = 22;
-// --errVal;              // Error: Cannot modify a constant.
+// // 5. Modulus Operation
+// // Definition: The modulus operator (%) returns the remainder of a division between two numbers.
+// let modValue = 4450;
+// console.log("4450 % 20 =", modValue % 20); // Output: 10
 
 
-// 7. Math Functions Examples
-// Definition: The Math object in JavaScript provides various methods for common mathematical operations.
-console.log("Math.round(12.9) =", Math.round(12.9));      // Rounds 12.9 to 13.
-console.log("Math.ceil(22.1) =", Math.ceil(22.1));          // Rounds 22.1 up to 23.
-console.log("Math.floor(44.33) =", Math.floor(44.33));      // Rounds 44.33 down to 44.
-console.log("Math.trunc(99.3) =", Math.trunc(99.3));        // Removes the decimal part: 99.
-console.log("Math.pow(100, 2) =", Math.pow(100, 2));        // 100^2 = 10000.
-console.log("Math.sqrt(10) =", Math.sqrt(10));              // Square root of 10 ≈ 3.16.
-console.log("Math.abs(-1223) =", Math.abs(-1223));          // Absolute value of -1223 is 1223.
-console.log("Math.max(44, 1000, 333) =", Math.max(44, 1000, 333)); // Maximum: 1000.
-console.log("Math.min(-2300, 1, 2) =", Math.min(-2300, 1, 2));     // Minimum: -2300.
+// // 6. Unary Operators
+// // Definition: Unary operators (like ++ and --) increment or decrement a variable by one.
+// // Note: Post-increment (a++) returns the value before incrementing,
+// // and pre-increment (++a) returns the value after incrementing.
+// let uniA = 20;
+// let uniB = 45;
+// let uniC = uniA + uniB + uniA++ + uniB++ + ++uniA + ++uniB;
+// console.log("Final uniA:", uniA);
+// console.log("Final uniB:", uniB);
+// console.log("Computed uniC:", uniC);
+
+// // The following lines that try to modify constants are commented out because they cause errors:
+// // const errConst = 33++; // Error: Cannot use ++ on a constant.
+// // const errVal = 22;
+// // --errVal;              // Error: Cannot modify a constant.
 
 
-// 8. Using the Spread Operator with Math.max
-// Definition: The spread operator (...) expands an array into individual elements.
-const numArray = [1, 2, 3, 4, 5, 6];
-const maxFromArray = Math.max(...numArray);
-console.log("Maximum in array:", maxFromArray); // Output: 6
+// // 7. Math Functions Examples
+// // Definition: The Math object in JavaScript provides various methods for common mathematical operations.
+// console.log("Math.round(12.9) =", Math.round(12.9));      // Rounds 12.9 to 13.
+// console.log("Math.ceil(22.1) =", Math.ceil(22.1));          // Rounds 22.1 up to 23.
+// console.log("Math.floor(44.33) =", Math.floor(44.33));      // Rounds 44.33 down to 44.
+// console.log("Math.trunc(99.3) =", Math.trunc(99.3));        // Removes the decimal part: 99.
+// console.log("Math.pow(100, 2) =", Math.pow(100, 2));        // 100^2 = 10000.
+// console.log("Math.sqrt(10) =", Math.sqrt(10));              // Square root of 10 ≈ 3.16.
+// console.log("Math.abs(-1223) =", Math.abs(-1223));          // Absolute value of -1223 is 1223.
+// console.log("Math.max(44, 1000, 333) =", Math.max(44, 1000, 333)); // Maximum: 1000.
+// console.log("Math.min(-2300, 1, 2) =", Math.min(-2300, 1, 2));     // Minimum: -2300.
 
 
-// 9. Generating a Random Integer (Simulate a Dice Roll)
-// Definition: Math.random() produces a number between 0 (inclusive) and 1 (exclusive).
-// Scaling and shifting this value can generate a random integer in a specific range.
-const diceRoll = Math.floor(Math.random() * 6) + 1;
-console.log("Dice roll (1-6):", diceRoll); // Random integer between 1 and 6.
+// // 8. Using the Spread Operator with Math.max
+// // Definition: The spread operator (...) expands an array into individual elements.
+// const numArray = [1, 2, 3, 4, 5, 6];
+// const maxFromArray = Math.max(...numArray);
+// console.log("Maximum in array:", maxFromArray); // Output: 6
 
 
-// 10. Generating a 4-Digit OTP
-// Definition: An OTP (One Time Password) can be generated by scaling Math.random() to a specific range.
-// Here, we generate a number between 1000 and 9999.
-const otp = Math.floor(Math.random() * 9000) + 1000;
-console.log("Generated OTP:", otp);
+// // 9. Generating a Random Integer (Simulate a Dice Roll)
+// // Definition: Math.random() produces a number between 0 (inclusive) and 1 (exclusive).
+// // Scaling and shifting this value can generate a random integer in a specific range.
+// const diceRoll = Math.floor(Math.random() * 6) + 1;
+// console.log("Dice roll (1-6):", diceRoll); // Random integer between 1 and 6.
 
 
-// 11. Rectangle: Area and Perimeter Calculation
-// Definition: For a rectangle, area = height × width and perimeter = 2 × (height + width).
-const rectHeight = 342;
-const rectWidth = 332;
-const rectangleArea = rectHeight * rectWidth;
-const rectanglePerimeter = 2 * (rectHeight + rectWidth);
-console.log("Rectangle Area:", rectangleArea);
-console.log("Rectangle Perimeter:", rectanglePerimeter);
+// // 10. Generating a 4-Digit OTP
+// // Definition: An OTP (One Time Password) can be generated by scaling Math.random() to a specific range.
+// // Here, we generate a number between 1000 and 9999.
+// const otp = Math.floor(Math.random() * 9000) + 1000;
+// console.log("Generated OTP:", otp);
 
 
-// 12. Triangle: Area Using Heron's Formula
-// Definition: Heron’s formula calculates the area of a triangle when all three side lengths are known.
-// First, compute the semi-perimeter, then apply: Area = √[s(s - a)(s - b)(s - c)].
-const side1 = 100;
-const side2 = 70;
-const side3 = 50;
-const semiPerimeter = (side1 + side2 + side3) / 2;
-const triangleArea = Math.sqrt(semiPerimeter * (semiPerimeter - side1) * (semiPerimeter - side2) * (semiPerimeter - side3));
-console.log("Triangle Semi-Perimeter:", semiPerimeter);
-console.log("Triangle Area (rounded):", Math.round(triangleArea));
+// // 11. Rectangle: Area and Perimeter Calculation
+// // Definition: For a rectangle, area = height × width and perimeter = 2 × (height + width).
+// const rectHeight = 342;
+// const rectWidth = 332;
+// const rectangleArea = rectHeight * rectWidth;
+// const rectanglePerimeter = 2 * (rectHeight + rectWidth);
+// console.log("Rectangle Area:", rectangleArea);
+// console.log("Rectangle Perimeter:", rectanglePerimeter);
 
 
-// 13. Circle: Circumference Calculation
-// Definition: The circumference of a circle is calculated as 2 × π × radius.
-const circleRadius = 45;
-const circleCircumference = 2 * Math.PI * circleRadius;
-console.log("Circle Circumference:", circleCircumference);
+// // 12. Triangle: Area Using Heron's Formula
+// // Definition: Heron’s formula calculates the area of a triangle when all three side lengths are known.
+// // First, compute the semi-perimeter, then apply: Area = √[s(s - a)(s - b)(s - c)].
+// const side1 = 100;
+// const side2 = 70;
+// const side3 = 50;
+// const semiPerimeter = (side1 + side2 + side3) / 2;
+// const triangleArea = Math.sqrt(semiPerimeter * (semiPerimeter - side1) * (semiPerimeter - side2) * (semiPerimeter - side3));
+// console.log("Triangle Semi-Perimeter:", semiPerimeter);
+// console.log("Triangle Area (rounded):", Math.round(triangleArea));
 
 
-
+// // 13. Circle: Circumference Calculation
+// // Definition: The circumference of a circle is calculated as 2 × π × radius.
+// const circleRadius = 45;
+// const circleCircumference = 2 * Math.PI * circleRadius;
+// console.log("Circle Circumference:", circleCircumference);
 
 
 
+
+
+// DSA IN JAVASCRIPT "DAY 2"
+
+// Conditoional statement: 
+// if conditon:
+
+// let ans = Number(prompt("Enter your age?")) //  ->we use Number becuase to change string to number becasue promt change number to string:
+
+// if(isNaN(ans)){
+//     console.log("Wrong input");
+    
+// }else if(ans>=18){
+//     console.log("You can vote")
+// }else{
+//     console.log("You can not vote")
+// }
+
+
+
+// Example question:
+
+
+// Percnatage formula : (Discount * amount ) / 100
+
+
+let amount = Number(prompt("Enter the final amount."));
+let discount = 0;
+
+if (isNaN(amount)) {
+    console.log("Wrong input");
+} else if (amount <= 5000) {
+    discount = 5;
+} else if (amount <= 7000) {
+    discount = 10;
+} else if (amount <= 9000) {
+    discount = 20;
+} else {
+    discount = 30; // Optional: for amounts above 9000
+}
+
+const discountAmount = Math.floor((discount * amount) / 100);
+const finalAmount = amount - discountAmount;
+
+console.log(`Discount you get: ₹${discountAmount}`);
+console.log(`Final price to pay: ₹${finalAmount}`);
